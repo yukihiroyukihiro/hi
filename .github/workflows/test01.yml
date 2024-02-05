@@ -18,11 +18,4 @@ jobs:
     - name: qmake
       run: |
            cd abcd
-           call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
-           c:\Qt\6.5.3\msvc2019_64\bin\qmake.exe
-           
-    - name: nmake
-      run: |
-           cd abcd
-           call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
-           nmake release
+  
