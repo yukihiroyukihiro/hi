@@ -20,4 +20,4 @@ jobs:
       run: |
            cd abcd
            call "c:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
-  
+           c:\Qt\6.5.3\msvc2019_64\bin\qmake.exe
