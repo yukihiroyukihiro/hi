@@ -26,14 +26,16 @@ jobs:
            nmake release
 
 
-    - name: Run exe (OK step)
+    - name: Run exe 1 (OK step)
       run: ./maintest03_OK.exe     
-      continue-on-error: true
 
-    - name: Run exe (NG step)
+
+    - name: Run exe 2 (NG step)
       run: ./maintest03_NG.exe     
-      continue-on-error: true
 
+
+    - name: Run exe 3 (OK step)
+      run: ./maintest03_OK.exe     
       
     - name: Display Hello world
       run: echo "Hello world"
