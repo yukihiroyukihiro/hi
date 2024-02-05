@@ -9,10 +9,5 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
-    - name: Set PowerShell Execution Policy
-      run: |
-        Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-
-    - name: Run echo command
-      run: Write-Output "Hello world"
+    - name: Display Hello world
+      run: echo "Hello world"
