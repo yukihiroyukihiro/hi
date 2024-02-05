@@ -9,7 +9,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Display Hello world
-      run: echo "Hello world"
     - name: Run exe
       run: ./maintest03_OK.exe     
+    - name: Display Hello world
+      run: echo "Hello world"
+
