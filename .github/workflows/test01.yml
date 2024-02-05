@@ -9,11 +9,7 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    
-    - name: Run exe
-      run: ./maintest03_OK.exe     
-    - name: Display Hello world
-      run: echo "Hello world"
+     
       
     - name: qmake
       shell: cmd
@@ -28,3 +24,9 @@ jobs:
            cd abcd
            call "c:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
            nmake release
+
+
+    - name: Run exe
+      run: ./maintest03_OK.exe     
+    - name: Display Hello world
+      run: echo "Hello world"
