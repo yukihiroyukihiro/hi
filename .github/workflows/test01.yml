@@ -30,8 +30,8 @@ jobs:
       run: ./maintest03_OK.exe     
 
 
-    - name: Run exe 2 (NG step)
-      run: ./maintest03_NG.exe     
+    - name: Run exe 2 (OK step)
+      run: ./maintest03_OK.exe     
 
 
     - name: Run exe 3 (OK step)
