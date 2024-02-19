@@ -38,4 +38,4 @@ jobs:
       run: ./maintest03_OK.exe     
       
     - name: Display Hello world
-      run: echo "Hello world"
+      run: echo "Hello world" 
