@@ -5,8 +5,19 @@ on: [push]
 jobs:
   build:
     runs-on: self-hosted
-
+    
     steps:
+
+    - name: Check commit message
+      run: |
+        if (Select-String -Pattern "\[compiler\]" -InputObject (git log -1 --pretty=%B)) {
+          Write-Host "Commit message contains [compiler], proceeding with build."
+        } else {
+          Write-Host "Commit message does not contain [compiler], skipping the entire job."
+          exit 0
+        }
+
+    
     - name: Checkout code
       uses: actions/checkout@v2
      
