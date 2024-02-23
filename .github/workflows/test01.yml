@@ -4,18 +4,11 @@ on: [push]
 
 jobs:
   build:
+    if: contains(github.event.head_commit.message, '[compiler]') # 只有當 commit message 包含 [compiler] 字串時才執行
     runs-on: self-hosted
     
     steps:
-    - name: Check commit message
-      run: |
-        if echo "${{ github.event.head_commit.message }}" | grep -q '\[compiler\]'; then
-          echo "Commit message contains [compiler], proceeding with the job."
-        else
-          echo "Commit message does not contain [compiler], skipping the job."
-          exit 0
-        fi
-   
+      
     - name: Checkout code
       uses: actions/checkout@v2
      
