@@ -7,17 +7,15 @@ jobs:
     runs-on: self-hosted
     
     steps:
-
     - name: Check commit message
       run: |
-        if (Select-String -Pattern "\[compiler\]" -InputObject (git log -1 --pretty=%B)) {
-          Write-Host "Commit message contains [compiler], proceeding with build."
-        } else {
-          Write-Host "Commit message does not contain [compiler], skipping the entire job."
-          exit 0
-        }
-
-    
+        if echo "${{ github.event.head_commit.message }}" | grep -q '\[compiler\]'; then
+          echo "Commit message contains [compiler], proceeding with the job."
+        else
+          echo "Commit message does not contain [compiler], skipping the job."
+          exit 1
+        fi
+   
     - name: Checkout code
       uses: actions/checkout@v2
      
