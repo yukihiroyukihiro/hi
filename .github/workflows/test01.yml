@@ -41,3 +41,6 @@ jobs:
       
     - name: Display Hello world
       run: echo "Hello world" 
+
+    - name: Git Cleanup
+      run: git gc
