@@ -42,7 +42,10 @@ jobs:
     - name: Run exe 4 (OK step)
       shell: cmd
       run: |
-           maintest03_OK.exe -o maintest03_OK.xml           
+           maintest03_OK.exe -o maintest03_OK.xml    
+           $xmlContent = Get-Content -Path output.xml -Raw
+           Write-Host "XML Content:"
+           Write-Host $xmlContent
            
       
     - name: Display Hello world
