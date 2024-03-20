@@ -44,14 +44,10 @@ jobs:
       run: |
            ./maintest03_OK.exe -o maintest03_123.xml 
            ./maintest03_OK.exe 
-       
-    - name: Read and Display XML content
-      shell: cmd
-      run: |
            $xmlContent = Get-Content -Path maintest03_OK.xml -Raw
            echo "XML Content:"
            echo $xmlContent
-        
+           
            
        
     - name: Display Hello world
