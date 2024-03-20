@@ -38,6 +38,13 @@ jobs:
 
     - name: Run exe 3 (OK step)
       run: ./maintest03_OK.exe     
+
+    - name: Run exe 4 (OK step)
+      shell: cmd
+      run: |
+           ./maintest03_NG.exe -o maintest03_NG.xml
+           ./maintest03_NG.exe           
+           
       
     - name: Display Hello world
       run: echo "Hello world" 
