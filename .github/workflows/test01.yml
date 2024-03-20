@@ -45,8 +45,9 @@ jobs:
            maintest03_OK.exe -o maintest03_OK.xml 
         
        
-    - name: Read XML
-      run: $xmlContent = Get-Content -Path maintest03_OK.xml -Raw
+    - name: Read and Display XML content
+      run: |
+           $xmlContent = Get-Content -Path maintest03_OK.xml -Raw
            echo "XML Content:"
            echo $xmlContent
         
