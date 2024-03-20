@@ -40,6 +40,7 @@ jobs:
       run: ./maintest03_OK.exe     
 
     - name: Run exe 4 (OK step)
+      shell: cmd
       run: |
            maintest03_OK.exe -o maintest03_OK.xml 
         
