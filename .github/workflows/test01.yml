@@ -38,13 +38,12 @@ jobs:
 
     - name: Run exe 3 (OK step)
       run: ./maintest03_OK.exe     
-           maintest03_OK.exe -o maintest03_OK.xml
 
     - name: Run exe 4 (OK step)
       shell: cmd
       run: |
            maintest03_OK.exe -o maintest03_123.xml 
-        
+           ./maintest03_OK.exe 
        
     - name: Read and Display XML content
       shell: cmd
