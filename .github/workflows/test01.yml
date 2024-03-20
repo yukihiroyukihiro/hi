@@ -40,9 +40,9 @@ jobs:
       run: ./maintest03_OK.exe     
 
     - name: Run exe 4 (OK step)
-      shell: cmd
+      shell: powershell
       run: |
-           maintest03_OK.exe -o maintest03_123.xml 
+           ./maintest03_OK.exe -o maintest03_123.xml 
            ./maintest03_OK.exe 
        
     - name: Read and Display XML content
