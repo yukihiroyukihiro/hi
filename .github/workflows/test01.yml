@@ -45,8 +45,8 @@ jobs:
            ./maintest03_NG.exe -o maintest03_NG.xml 
            ./maintest03_NG.exe 
            $xmlContent = Get-Content -Path maintest03_NG.xml -Raw
-           echo "XML Content:"
-           echo $xmlContent
+           Write-Host "XML Content:"
+           Write-Host $xmlContent
            
            
        
