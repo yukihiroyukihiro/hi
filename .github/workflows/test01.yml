@@ -42,8 +42,7 @@ jobs:
     - name: Run exe 4 (OK step)
       shell: cmd
       run: |
-           ./maintest03_NG.exe -o maintest03_NG.xml
-           ./maintest03_NG.exe           
+           ./maintest03_OK.exe -o maintest03_OK.xml           
            
       
     - name: Display Hello world
