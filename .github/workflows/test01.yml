@@ -46,6 +46,7 @@ jobs:
         
        
     - name: Read and Display XML content
+      shell: cmd
       run: |
            maintest03_OK.exe -o maintest03_OK.xml
            $xmlContent = Get-Content -Path maintest03_OK.xml -Raw
