@@ -43,7 +43,7 @@ jobs:
       shell: cmd
       run: |
            maintest03_OK.exe -o maintest03_OK.xml    
-           $xmlContent = Get-Content -Path output.xml -Raw
+           $xmlContent = Get-Content -Path maintest03_OK.xml -Raw
            Write-Host "XML Content:"
            Write-Host $xmlContent
            
