@@ -16,14 +16,14 @@ jobs:
     - name: qmake
       shell: cmd
       run: |
-           cd \practice_unit_03\main03
+           cd practice_unit_03\main03
            call "c:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
            c:\Qt\6.5.3\msvc2019_64\bin\qmake.exe
 
     - name: nmake
       shell: cmd
       run: |
-           cd \practice_unit_03\main03
+           cd practice_unit_03\main03
            call "c:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
            nmake release
  
@@ -33,21 +33,21 @@ jobs:
     - name: qmake
       shell: cmd
       run: |
-           cd \practice_unit_03\maintest03
+           cd practice_unit_03\maintest03
            call "c:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
            c:\Qt\6.5.3\msvc2019_64\bin\qmake.exe
 
     - name: nmake
       shell: cmd
       run: |
-           cd \practice_unit_03\maintest03
+           cd practice_unit_03\maintest03
            call "c:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
            nmake release
  
     - name: Run exe 0 unittest
       shell: powershell
       run: |
-           cd \practice_unit_03\maintest03\release
+           cd practice_unit_03\maintest03\release
            ./maintest03.exe -o maintest03.xml 
            ./maintest03.exe 
            $xmlContent = Get-Content -Path maintest03.xml -Raw
