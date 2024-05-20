@@ -26,7 +26,7 @@ jobs:
            cd abcd
            call "c:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
            nmake release
-
+ 
 
     - name: Run exe 1 (OK step)
       shell: powershell
