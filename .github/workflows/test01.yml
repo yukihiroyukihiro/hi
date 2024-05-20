@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-    if: contains(github.event.head_commit.message, '[compiler]') # 只有當 commit message 包含 [compiler] 字串時才執行
+    if: contains(github.event.head_commit.message, '[autotest]') # 只有當 commit message 包含 [autotest] 字串時才執行
     runs-on: self-hosted
     
     steps:
