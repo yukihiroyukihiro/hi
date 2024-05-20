@@ -23,10 +23,45 @@ jobs:
     - name: nmake
       shell: cmd
       run: |
-           cd abcd
+           cd \practice_unit_03\main03
            call "c:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
            nmake release
  
+
+
+    # for auto build unittest
+    - name: qmake
+      shell: cmd
+      run: |
+           cd \practice_unit_03\maintest03
+           call "c:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
+           c:\Qt\6.5.3\msvc2019_64\bin\qmake.exe
+
+    - name: nmake
+      shell: cmd
+      run: |
+           cd \practice_unit_03\maintest03
+           call "c:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
+           nmake release
+ 
+    - name: Run exe 0 unittest
+      shell: powershell
+      run: |
+           cd \practice_unit_03\maintest03\release
+           ./maintest03_OK.exe -o maintest03_OK.xml 
+           ./maintest03_OK.exe 
+           $xmlContent = Get-Content -Path maintest03_OK.xml -Raw
+           echo "XML Content:"
+           echo $xmlContent
+
+
+
+
+
+
+
+
+
 
     - name: Run exe 1 (OK step)
       shell: powershell
