@@ -16,6 +16,6 @@ main03::~main03()
 
 void main03::on_pushButton_clicked()
 {
-    ui->lineEdit->setText("AAAAAAA");
+    ui->lineEdit->setText("BBBB");
 }
 
